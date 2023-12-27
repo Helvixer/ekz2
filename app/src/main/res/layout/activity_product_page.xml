@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductPage">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="57dp"
+        android:layout_marginStart="26dp"
+        android:onClick="back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <ImageView
+        android:id="@+id/product_icon"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="@id/back_btn"
+        app:layout_constraintTop_toBottomOf="@id/back_btn"
+        android:src="@drawable/americano"/>
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="Загрузка..."
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/product_icon"
+        app:layout_constraintLeft_toLeftOf="@id/product_icon"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/product_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@id/product_name"
+        app:layout_constraintLeft_toLeftOf="@id/product_name"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text=""
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/product_desc"
+        app:layout_constraintLeft_toLeftOf="@id/product_desc"
+        android:layout_marginTop="15dp"/>
+
+
+    <TextView
+        android:id="@+id/success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Success"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="285dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your order has been placed successfully.\n For more details, go to my orders."
+        android:textSize="14sp"
+        android:textColor="#AAAAAA"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/success"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
